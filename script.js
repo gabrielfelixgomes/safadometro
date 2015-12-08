@@ -46,9 +46,6 @@ function id(element) {
             porcentagem['anjo']   = String(_anjo.toFixed(2)).concat(" %");
 
             var strMeta = "Sou " + porcentagem['anjo'] + " anjo, perfeito, mas aquele " + porcentagem['safado'] + " é vagabundo!";
-            //id("meta-description").setAttribute("content", strMeta);
-            //strMeta = "Sou "+porcentagem['anjo']+"% anjo, perfeito, mas aquele "+porcentagem['safado']+"% é vagabundo!"
-            //document.getElementById("share-twitter").setAttribute('data-text', strMeta);
           } else {
             porcentagem['safado'] = "0 %";
             porcentagem['anjo']   = "0 %";
@@ -91,6 +88,8 @@ function id(element) {
       if (result) {
         id('anjo').innerHTML   = result['anjo'];
         id('safado').innerHTML = result['safado'];
+        id("compartilha").setAttribute("content", " Sou " + result['anjo'] + " Anjo, perfeito, mas aquele " + result['safado'] + " é vagabundo!");
+        console.log(id("compartilha"));
       }
     });
   }
